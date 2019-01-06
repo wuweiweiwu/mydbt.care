@@ -1,3 +1,5 @@
+language: node_js
+before_deploy: 'yarn build'
 deploy:
   provider: firebase
   token:
