@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import FirebaseContext from './context';
 import Firebase from './Firebase';
+
+import './index.css';
 
 require('dotenv').config();
 
