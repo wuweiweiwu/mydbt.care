@@ -4,6 +4,7 @@ node_js:
 script:
   - 'yarn build'
 deploy:
+  skip_cleanup: true
   provider: firebase
   token:
     secure: iDt5iqzKfMV8wQNRyZMLlQf9cu7ostMAXZwoec1NYJLU/zDuG4tCBj1whBBrGIEgit1nrvXUTMiwSQwbYwPXZitU35NcX49eexPBRbvBHzXpc+jcY3jIyjmGIiRJnEvbhmpdxd7z+F8/BckbvOWNs9qZ1y5abJctAIDkxIo7cx9vkvX9yatRE55RM9tB/LN3EUK1KwYLo3HqcIf3YpAumWo3YHUB0+IzsQ9gxsYw2xOWG1dhURD30lU00Z4aokRHori/dEj+kkddRgx6W11y+e1ZXJChO2pEzJ/JZ4qJThVF3ZqBjeim/EfpOENeqOqXU9m2lIQufJwFsXxvBKhwif+MIG7ylu3hyTf8/iBbB/DGoqTJKbbUvAkp1YlkLBO3/JLNyLBSLhNZ/RJl/GhxP5GRusWBzq2KxEUp3NXoIxaX39Q7Ln+5v/CTAM9RGjgzPKvSib6zqobvbEan0/ozGLMWbJdgp7oCVtW1aHjwm+DBPI1TRrfaDNUH+juhMEABscg+epjsCu64+Ju2apuRPS/py3qfWsxE0X2dLt/Lv3tpNRjTisVxs4Q4dtWL2iLHZAfdWyS3lPFiStO2mqia1ji3o2i+VCUNaNY8lpkrsLwqJW/7HK5cvcPSHw7E4wuGHFLwg8owWuQxMmKCE8SvNwPaQhnLv4FPEqvKwp/aaCo=
