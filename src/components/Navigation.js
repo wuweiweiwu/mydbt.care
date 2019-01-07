@@ -2,12 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-  background-color: darkblue;
   width: 100%;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
   grid-template-rows: auto;
-  grid-template-areas: 'title . signup login';
+  grid-template-areas: 'title . login';
   align-items: center;
   justify-items: center;
   z-index: 3001;
@@ -23,14 +22,9 @@ const Title = styled.a`
   font-weight: bold;
   text-decoration: none;
   grid-area: title;
-`;
-
-const SignUp = styled.a`
-  color: white;
-  margin: 0;
-  font-size: 16px;
-  text-decoration: none;
-  grid-area: signup;
+  &:hover {
+    color: pink;
+  }
 `;
 
 const Login = styled.a`
@@ -39,6 +33,10 @@ const Login = styled.a`
   font-size: 16px;
   text-decoration: none;
   grid-area: login;
+
+  &:hover {
+    color: pink;
+  }
 `;
 
 export default class Navigation extends React.Component {
@@ -46,7 +44,6 @@ export default class Navigation extends React.Component {
     return (
       <Container>
         <Title href="/">MyDBT.care</Title>
-        <SignUp href="/signup">Sign Up</SignUp>
         <Login href="/login">Login</Login>
       </Container>
     );
