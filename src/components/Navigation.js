@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { withFirebase } from '../context';
 import { compose } from 'recompose';
 import * as ROUTES from '../routes';
@@ -29,21 +29,12 @@ const Title = styled.a`
   grid-area: title;
 `;
 
-const Link = styled.a`
-  background-color: white;
-  border-radius: 3px;
-  height: 35px;
-  width: 70px;
-  color: blue;
+const StyledLink = styled(Link)`
+  display: block;
+  font-size: 16px;
+  color: white;
   text-decoration: none;
-  line-height: 35px;
-  text-align: center;
   grid-area: ${props => props.area};
-
-  &:hover {
-    transition: all 0.2s ease-in 0s;
-    box-shadow: rgb(221, 217, 255) 0px 0px 16px;
-  }
 `;
 
 const Button = styled.button`
@@ -80,6 +71,17 @@ const LogoutButton = compose(
   </Button>
 ));
 
+const LoginButton = compose(withRouter)(({ history }) => (
+  <Button
+    onClick={() => {
+      history.push(ROUTES.LOGIN);
+    }}
+    area="login"
+  >
+    Login
+  </Button>
+));
+
 export default class Navigation extends React.Component {
   render() {
     const { hasAuth } = this.props;
@@ -88,14 +90,12 @@ export default class Navigation extends React.Component {
       <Container hasAuth={hasAuth}>
         <Title href="/">MyDBT.care</Title>
         {!hasAuth ? (
-          <Link href="/login" area="login">
-            Login
-          </Link>
+          <LoginButton />
         ) : (
           <React.Fragment>
-            <Link href="/home" area="home">
+            <StyledLink to="/home" area="home">
               Home
-            </Link>
+            </StyledLink>
             <LogoutButton />
           </React.Fragment>
         )}
