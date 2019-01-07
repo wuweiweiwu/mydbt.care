@@ -16,15 +16,14 @@ const Container = styled.div`
   align-items: center;
   justify-items: center;
   z-index: 3001;
-  padding: 0px 16px;
   grid-column-gap: 32px;
-  padding: 5px 16px;
+  padding: 10px 16px;
 `;
 
 const Title = styled.a`
   color: white;
   margin: 0;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   text-decoration: none;
   grid-area: title;
