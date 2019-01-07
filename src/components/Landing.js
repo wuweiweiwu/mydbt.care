@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   padding-top: 90px;
   padding-bottom: 80px;
   position: relative;
-  height: calc(100vh - 38px);
+  height: calc(100vh - 50px);
 `;
 
 const Title = styled.div`
