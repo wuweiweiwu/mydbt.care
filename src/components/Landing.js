@@ -30,13 +30,18 @@ const Description = styled.div`
 const SignUp = styled.a`
   background-color: white;
   border-radius: 3px;
-  height: 40px;
+  height: 35px;
   width: 100px;
   color: blue;
   text-decoration: none;
-  display: block;
-  line-height: 40px;
+  line-height: 35px;
   text-align: center;
+  display: block;
+
+  &:hover {
+    transition: all 0.2s ease-in 0s;
+    box-shadow: rgb(221, 217, 255) 0px 0px 16px;
+  }
 `;
 
 const Info = styled.div`

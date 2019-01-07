@@ -22,20 +22,22 @@ const Title = styled.a`
   font-weight: bold;
   text-decoration: none;
   grid-area: title;
-  &:hover {
-    color: pink;
-  }
 `;
 
 const Login = styled.a`
-  color: white;
-  margin: 0;
-  font-size: 16px;
+  background-color: white;
+  border-radius: 3px;
+  height: 35px;
+  width: 70px;
+  color: blue;
   text-decoration: none;
+  line-height: 35px;
+  text-align: center;
   grid-area: login;
 
   &:hover {
-    color: pink;
+    transition: all 0.2s ease-in 0s;
+    box-shadow: rgb(221, 217, 255) 0px 0px 16px;
   }
 `;
 
